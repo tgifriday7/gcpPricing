@@ -110,7 +110,7 @@ def downloadSKUFile(token, service_id, display_name, jsonDirectory):
     request_url = f"https://cloudbilling.googleapis.com/v1/services/{service_id}/skus?key={token}"
     response = requests.get(request_url)
 
-    fileoutputpath = f"{jsonDirectory}/json/gcpPricing-{service_id}.json"
+    fileoutputpath = f"{jsonDirectory}gcpPricing-{service_id}.json"
 
     with open(fileoutputpath, "w") as f:
         f.write(response.text)
